@@ -1,14 +1,12 @@
-import { Navbar, Welcome, Transaction } from "./components";
+import { Navbar, Welcome } from "./components";
+import { WavyBackground } from "./components/ui/wavy-background";
 
 const App = () => {
   return (
-    <div className="min-h-screen">
-      <div className="gradient-bg-welcome">
-        <Navbar />
-        <Welcome />
-      </div>
-      <Transaction />
-    </div>
+    <WavyBackground className="min-h-screen bg-center bg-cover">
+      <Navbar />
+      <Welcome />
+    </WavyBackground>
   );
 };
 

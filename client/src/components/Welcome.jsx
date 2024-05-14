@@ -1,5 +1,4 @@
 import React, { useContext } from "react";
-import { AiFillPlayCircle } from "react-icons/ai";
 import { SiEthereum } from "react-icons/si";
 import { BsInfoCircle } from "react-icons/bs";
 
@@ -56,12 +55,14 @@ const Welcome = () => {
             <button
               type="button"
               onClick={connectWallet}
-              className="flex flex-row justify-center items-center my-5 bg-[#2952e3] p-3 rounded-full cursor-pointer hover:bg-[#2546bd]"
+              className="p-[3px] relative mt-5"
             >
-              <AiFillPlayCircle className="mr-2 text-white" />
-              <p className="text-base font-semibold text-white">
-                Connect Wallet
-              </p>
+              <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-indigo-800 to-purple-800" />
+              <div className="px-8 py-2  bg-black rounded-[6px]  relative group transition duration-200 text-white hover:bg-transparent">
+                <p className="text-base font-semibold text-white">
+                  Connect Wallet
+                </p>
+              </div>
             </button>
           )}
 
@@ -137,9 +138,12 @@ const Welcome = () => {
               <button
                 type="button"
                 onClick={handleSubmit}
-                className="text-white w-full mt-2 border-[1px] p-2 border-[#3d4f7c] hover:bg-[#246b2f] rounded-full cursor-pointer"
+                className="w-full mt-2 relative inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50"
               >
-                Send now
+                <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
+                <span className="inline-flex items-center justify-center w-full h-full px-3 py-1 text-sm font-medium text-white rounded-full cursor-pointer bg-slate-950 backdrop-blur-3xl hover:bg-gradient-to-r from-indigo-800 to-purple-800 ">
+                  Send now
+                </span>
               </button>
             )}
           </div>
